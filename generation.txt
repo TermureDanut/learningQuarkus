@@ -1,0 +1,1 @@
+mvn -U io.quarkus:quarkus-maven-plugin:create "-DprojectGroupId=org.quarkus.learning" "-DprojectArtifactId=learningQuarkus" "-DclassName=org.quarkus.learning.InitialResource" "-Dextensions=resteasy-jsonb"
