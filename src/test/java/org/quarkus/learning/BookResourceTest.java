@@ -29,7 +29,7 @@ public class BookResourceTest {
                 then().statusCode(200).body("title", is("book1")).
                 body("author", is("author1")).
                 body("year", is(2024)).
-                body("genre", is("g"));
+                body("genre", is("IT"));
 
     }
 
