@@ -1,0 +1,8 @@
+mvn quarkus:dev - to run the quarkus app
+mvn test - to run tests in the quarkus app
+
+the properties set in app.properties can be overridden in dev or test using call arguments ("-DpropertyName=value")
+
+all configurations that can be added to app.properties on quarkus are found on https://quarkus.io/guides/all-config
+
+you can see all the configuration of the quarkus app that are already in place on http://localhost:8080/q/dev-ui/configuration-form-editor

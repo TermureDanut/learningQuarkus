@@ -8,7 +8,7 @@ import java.util.Optional;
 
 @ApplicationScoped                      /// ensures that only one instance of BookRepository is created and used
 public class BookRepository {
-    @ConfigProperty(name = "books.genre", defaultValue = "Fantasy")
+    @ConfigProperty(name = "books.genre", defaultValue = "Fantasy")         /// takes values from the app.properties, if there is none it takes the defaultValue, and injects it in the variable
     String genre;
     public List<Book> getAllBooks(){
         return List.of(
