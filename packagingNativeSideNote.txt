@@ -1,0 +1,9 @@
+mvn package "-Dquarkus.package.type=native" or mvn package "-Pnative" to package the app as a native binary using GraalVM
+
+packaging a quarkus app as a native binary is faster than all types of jars and also doesn't need it to be run using JVM (java -jar ...)
+in the native binary we have the needed JVM already and the entire code
+
+the binary can be executed only with its name and args
+
+when using GraalVM to generate a native binary, it eliminates unneeded code or code that it doesn't understand so it can produce a binary that doesn't work
+
