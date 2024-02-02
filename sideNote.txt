@@ -28,3 +28,5 @@ mvn quarkus:dev "-Dquarkus.profile=newProfileName"
 %profileName.property - limits the property to that profile
 
 properties that are not set to a certain profile, are set to all profiles
+
+"-Dproperty" - as argument in cmd to override a property from app.properties

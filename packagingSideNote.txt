@@ -1,0 +1,16 @@
+types of jars : jar, legacy jar, uber-jar (speciffied by quarkus.package.type propery given as argument, default is jar)
+
+to package a quarkus app using maven - mvn package (optional call arguments)
+if you are packaging only with mvn package => in target is created a jar that contains only the code, so it can t run
+
+in target inside the quarkus-app dir there is a quarkus-run.jar that contains code to bootstrap our app using the jars from:
+        - app dir : contains all our business code as jar
+        - lib dir : contains all dependencies as jars
+inside the quarkus dir there is a quarkus-application.dat that speeds up the classpath scanning
+
+to run a jar : java -jar quarkus-run.jar - starts faster, in production (%prod) profile
+
+to create a uber-jar : mvn package "-Dquarkus.package.type=uber-jar" => in target creates a name-runner.jar
+uber-jar - creates a single jar containing the entire code, the dependencies and the runtime
+
+to run name-runner.jar : java -jar name-runner.jar - starts even faster (because of the warming up) still in prod profile
