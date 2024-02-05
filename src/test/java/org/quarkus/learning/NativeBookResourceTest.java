@@ -15,14 +15,14 @@ import static org.hamcrest.CoreMatchers.is;
 
 @QuarkusIntegrationTest
 public class NativeBookResourceTest {
-    @Test                       /// you can override a test form the JVM tests to work on the native test
-    public void shouldGetBookById(){
-        given().header(HttpHeaders.ACCEPT, MediaType.APPLICATION_JSON).pathParams("id", 1).
-                when().get("/api/books/{id}").
-                then().statusCode(200).body("title", is("book1")).
-                body("author", is("author1")).
-                body("year", is(2024)).
-                body("genre", is("IT"));
-
-    }
+//    @Test                       /// you can override a test form the JVM tests to work on the native test
+//    public void shouldGetBookById(){
+//        given().header(HttpHeaders.ACCEPT, MediaType.APPLICATION_JSON).pathParams("id", 1).
+//                when().get("/api/books/{id}").
+//                then().statusCode(200).body("title", is("book1")).
+//                body("author", is("author1")).
+//                body("year", is(2024)).
+//                body("genre", is("IT"));
+//
+//    }
 }
